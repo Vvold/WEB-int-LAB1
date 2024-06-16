@@ -1,52 +1,62 @@
 <template>
-  <nav class="navbar navbar-light bg-light">
-    <div class="container d-flex justify-content-between">
-      <RouterLink to="/main">
-        <button class="btn btn-outline-secondary">Back to Posts</button>
-      </RouterLink>
-      <div class="navbar-brand d-flex align-items-center logo">
-        <svg xmlns="http://www.w3.org/2000/svg"
-             width="48"
-             height="48"
-             fill="currentColor"
-             class="bi bi-person-circle logo"
-             viewBox="0 0 16 16">
-          <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm-.5 5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-.148 4.5a2.5 2.5 0 1 0-2.704 0h2.704z"/>
-        </svg>
-        <h1> MY BLOG </h1>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand"><img src="../../logo.png"
+                                   alt="png"
+                                   width="25"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="main.vue">Work Page</a>
+          <a class="nav-link" href="#">About Us</a>
+          <a class="nav-link" href="profile.vue">Profile</a>
+          <a class="nav-link" href="../../index.html">EXIT</a>
+        </div>
       </div>
-      <RouterLink to="/profile">
-        <button class="btn btn-outline-secondary">Profile</button>
-      </RouterLink>
     </div>
   </nav>
-  <div class="container-fluid w-50">
+  <div class="container">
     <div class="card bg-secondary mb-3 about-app-card">
-      <div class="card-header bg-secondary text-white text-center"><h5>ABOUT APP</h5></div>
+      <div class="card-header bg-secondary text-white text-center"><h5>ABOUT US</h5></div>
       <div class="card-body bg-secondary">
-        <div class="text-white">
-          <div class="logo"></div>
-          <p>"MY BLOG" is a web application that allows everyone to express their opinions on an independent platform.</p>
-          <p>The user can:</p>
-          <br>
-          <ul>
-            <li>add new post</li>
-            <li>remove and edit your own posts</li>
-            <li>comments posts</li>
-          </ul>
+        <div class="row">
+          <div class="col text-white">
+            <div class="logo"></div>
+            <p> PHONE DIRECTORY - is an app that gives you access to a list of your phone numbers.</p>
+            <p>The user can register on the site, he will have his own profile.</p>
+            <p>The user can:</p>
+            <ul>
+              <li>add new phone numbers</li>
+              <li>delete phone numbers</li>
+              <li>sort numbers</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script setup lang="ts">
-
+<script>
+export default {
+  name: 'AboutUs'
+}
 </script>
 
+<style>
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css');
 
-<style scoped>
-.container-fluid {
-  height: 100vh;
+.about-app-card {
+  margin-top: 20px;
+}
+
+.logo {
+  background-image: url('../../logo.png');
+  width: 50px;
+  height: 50px;
+  background-size: cover;
 }
 </style>
